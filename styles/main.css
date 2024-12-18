@@ -1,0 +1,574 @@
+main{ 
+    display:flex; 
+    flex-flow:column nowrap; 
+    justify-content:start; 
+    align-items:stretch; 
+}
+
+.top__content {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    position: relative;
+    min-height: 800px;
+    text-align: left;
+}
+
+.top__image-block {
+    width: 100%;
+    height: 850px;
+    background-image: url('../images/cover/fly_cam.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.top__welcome-text {
+    font-family: 'Playfair Display', serif; 
+    font-size: 36px;
+    font-weight: 500;
+    color: #333; 
+    padding: 15px 50px;
+    border-radius: 10px;
+    text-align: center;
+    /*margin-top: -500px;*/
+    margin-bottom: 200px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    line-height: 1.5;
+    letter-spacing: 0.5px; 
+    flex-grow:1; 
+    flex-shrink:1; 
+}
+
+.top__catalog {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #1c1b1b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+    margin-bottom: 150px; 
+}
+
+.top__catalog:hover {
+    background-color: #ff9358;
+}
+
+/* Стилизация категорий */
+.categories {
+    text-align: center;
+    padding: 10px;
+    margin: 100px 50px; 
+}
+
+.categories__heading {
+    font-size: 2em;
+    text-align: left;
+    padding-bottom: 15px;
+    font-family: "PT Serif Caption", serif;
+}
+
+.categories__list {
+    box-shadow: 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    /*grid-template-columns: repeat(4, 1fr);*/
+    justify-content:stretch; 
+    align-items:start; 
+    gap: 2%;
+}
+
+.categories__item { 
+    flex:0 0 23.5%;
+    aspect-ratio: 1; 
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.categories__link {
+    width:100%; 
+    height:100%; 
+    display: block;
+    position: relative;
+}
+
+.categories__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Чтобы изображение сохраняло свои пропорции */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.categories__item:hover .categories__image {
+    transform: scale(1.05); /* Эффект увеличения изображения при наведении */
+}
+
+.categories__name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    margin-top: auto; /* Pushes the button to the bottom */
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: darkgray;
+}
+
+/* Стили для секции Хиты продаж */
+.best-sellers {
+    margin: 60px 50px;
+    background-color: #1c1b1b;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    min-height: 450px;
+    padding: 30px 50px;
+}
+
+.best-sellers__heading {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: "PT Serif Caption", serif;
+}
+
+.best-sellers__slider {
+    overflow: hidden;
+    width: 85%; /* Ширина контейнера слайдера */
+    margin: auto;
+}
+
+.best-sellers__list {
+    display: flex;
+    gap: 15px; /* Расстояние между карточками */
+    transition: transform 0.5s ease;
+}
+
+.best-sellers__item {
+    background-color: #ffffff; 
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    flex: 0 0 280px; 
+    color: #000;
+    height: 380px; 
+    overflow: hidden; 
+    text-decoration: none;
+    flex-direction: column; 
+    justify-content: stretch; 
+}
+
+.best-sellers__item .img{ 
+    width:100%; 
+    flex-grow:0; 
+    flex-shrink:0; 
+    height:180px; 
+    resize:both; 
+    margin-bottom:20px; 
+}
+.best-sellers__item .img img{ 
+    width:100%; 
+    height:100%; 
+    object-fit:contain; 
+    object-position:50% 50%; 
+    border-radius: 5px;
+}
+/*
+.best-sellers__img {
+    width: 100%; 
+    height: 180px;  
+    object-fit: contain; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+*/
+.best-sellers__item-name { 
+    flex-grow:0; 
+    flex-shrink:0;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Одна строка текста */
+    overflow: hidden; /* Скрыть контент, выходящий за пределы */
+    text-overflow: ellipsis; /* Эффект многоточия */
+}
+
+.best-sellers__item-desc {
+    flex-grow:1; 
+    flex-shrink:1;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Одна строка текста */
+    overflow: hidden; /* Скрыть контент, выходящий за пределы */
+    text-overflow: ellipsis; /* Эффект многоточия */
+}
+
+.best-sellers__prices { 
+    flex-grow:0; 
+    flex-grow:0; 
+    text-decoration: line-through;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.best-sellers__prices.none {
+    color: #fff;
+}
+
+/* Стили для стрелок */
+.slider-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-arrow {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 20%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-80%);
+    font-size: 1.5rem;
+}
+
+.slider-arrow-left {
+    left: 10px;
+}
+
+.slider-arrow-right {
+    right: 10px;
+}
+
+.slider-arrow:hover {
+    background-color: #666;
+}
+
+/* Стили для секции акций */
+.promotions {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 50px; /* Same margins as .best-sellers */
+}
+
+.promotions__heading {
+    font-family: "PT Serif Caption", serif;
+    align-self: flex-start;
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    
+}
+
+.promotions__list {
+    display: flex;
+    flex-wrap: nowrap; /* Отключает перенос элементов на новую строку */
+    gap: 20px; /* Расстояние между карточками */
+    overflow-x: auto; /* Позволяет прокручивать содержимое по горизонтали, если оно не умещается */
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+#swiper2 .swiper-wrapper{
+    padding:10px; 
+}
+
+.promotions__item {
+    min-width: 270px; /* Фиксированная ширина для каждого товара */
+    flex: 1 1 calc(35% - 20px); /* Фиксирует ширину элемента, чтобы он не сжимался */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    height: 420px;
+    box-sizing: border-box;
+    user-select:none; 
+    display:flex; 
+    flex-flow:column wrap; 
+    justify-content:stretch; 
+}
+
+.promotions__item:hover {
+    transform: scale(1.05);
+}
+/*
+.promotions__img {
+    max-height: 150px;  
+    object-fit: contain;
+}
+*/
+.promotions__item .img{
+    width:100%; 
+    flex-grow:0; 
+    flex-shrink:0; 
+    height:150px; 
+    resize:both; 
+    margin-bottom:10px; 
+}
+.promotions__item .img img{
+    width:100%; 
+    height:100%; 
+    object-fit:contain; 
+    object-position:50% 50%; 
+    border-radius: 5px;
+}
+.promotions__item-name {
+    flex-grow:0; 
+    flex-shrink:0; 
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.promotions__item-desc {
+    font-size: 0.9em;
+    color: #666;
+    flex-grow: 1; 
+    flex-shrink:1; 
+    margin-bottom: 10px; 
+    max-height:60px; 
+    overflow:hidden; 
+}
+
+.promotions__prices {
+    font-size: 0.9rem;
+    color: rgb(158, 158, 158);
+    text-decoration: line-through;
+    margin: 15px 0;
+}
+
+.promotions__item p {
+    font-size: 1em;
+    color: #333;
+}
+
+.promotions__list p {
+    font-size: 1em;
+    color: #000;
+}
+
+.container__link {
+    display: flex;
+    margin: 10px 25px 30px 75px;
+}
+
+.link-to-catalog {
+    color: #000000; /* Белый цвет текста */
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.link-to-catalog:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: #ff9358;
+}
+
+
+.slider{ width:100%; height:400px; background:transparent; position:relative; flex-direction:column; }
+.swiper{ width:100%; height:100%; position:relative; }
+.swiper .inner{ overflow:hidden; width:100%; height:100%; }
+.swiper-wrapper{ height:100%; display:flex; flex-flow:row nowrap; justify-content:start; align-items:start; gap:0px; margin:0px; position:relative; padding-top:10px; }
+.swiper-slide{ user-select:none; }
+.swiper-button{ position:absolute; top:0; cursor:pointer; display:flex; flex-flow:row nowrap; align-items:center; justify-content:center; gap:0; width:40px; height:100%; background:transparent; border:0; }  
+.swiper-button:before, 
+.swiper-button:after{ color:#fff; transform:translateY(20px); opacity:0.7; }
+.swiper-button-prev{ left:-45px; }
+.swiper-button-next{ right:-45px; }  
+.swiper-pagination{ position:static; }
+.swiper-pagination span{ width:10px; height:10px; border-radius:5px; background:rgba(255,255,255,0.5); transition:all 0.3s linear; } 
+.swiper-pagination span.swiper-pagination-bullet-active{ background:rgba(255,255,255,1); width:30px; }
+
+
+.slider2{ width:100%; height:500px; background:transparent; position:relative; flex-direction:column; padding:20px; }
+.slider2 .swiper{ width:100%; height:100%; position:relative; }
+.slider2 .swiper .inner{ overflow:hidden; width:100%; height:100%; }
+.slider2 .swiper-wrapper{ width:auto; height:100%; display:flex; flex-flow:row nowrap; justify-content:start; align-items:start; gap:0px; margin:0px; position:relative; padding-top:10px; list-style:none; }
+
+/* Responsive Tweaks for Large Screen */
+@media (min-width: 1440px) {
+    .best-sellers__slider {
+        width: 90%;
+    }
+    .promotions__item {
+        flex-basis: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 992px) { 
+    .categories{
+        margin:50px 20px; 
+    }
+    .best-sellers__slider,
+    .promotions__list {
+        gap: 10px;
+    }
+    .promotions__item {
+        flex: 1 1 calc(50% - 20px); /* Две колонки */
+    } 
+    .best-sellers{
+        padding:30px 10px; 
+        margin:60px 30px; 
+    } 
+    .swiper-button{ 
+        display:none; 
+    }
+    .promotions{
+        padding:30px 10px; 
+        margin:60px 30px; 
+    }
+}
+
+@media (max-width: 768px) { 
+    .top__content{
+        min-height:100px; 
+    }
+    .top__image-block {
+        height: 100%;
+        background-size: cover;
+    }
+    .best-sellersitem, .promotionsitem {
+        width: 100%;
+        margin: 0 auto;
+    } 
+    .top__welcome-text{
+        font-size:24px; 
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(5px);
+    } 
+    .categories__list{ 
+        flex-flow:row wrap; 
+        gap:25; 
+    }
+    .categories__item { 
+        flex:0 0 49%;
+        aspect-ratio: 1; 
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden; 
+        margin-bottom:20px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .categories__list {
+        grid-template-columns: 1fr; /* Одна колонка */
+    }
+    .best-sellersheading, .promotionsheading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .best-sellersslider {
+        flex-direction: column;
+        align-items: center;
+    }
+    .promotions{
+        margin-left:0; 
+        margin-right:0; 
+    }
+}
+
+@media (max-width: 576px) {
+    .promotions__list {
+        flex-direction: column; /* Переключаем на столбик */
+        align-items: center; /* Центрируем элементы по горизонтали */
+    }
+    .promotions__item {
+        width: 100%; /* Устанавливаем ширину на 100% */
+        margin-bottom: 20px; /* Добавляем отступ снизу между элементами */
+    }
+}
+
+@media (max-width: 576px) {
+    body, html {
+        font-size: 12px;
+    }
+    .top__welcome-text {
+        font-size: 16px;
+    }
+    .categoriesheading, .best-sellersheading, .promotions__heading {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .categories__list {
+        grid-template-columns: 1fr; /* Одна колонка */
+    }
+    .best-sellers__heading, .promotions__heading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .best-sellers__slider, .promotions__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .promotions__list {
+        flex-direction: column; /* Переключаем на столбик */
+        align-items: center; /* Центрируем элементы по горизонтали */
+    }
+    .promotions__item {
+        width: 100%; /* Устанавливаем ширину на 100% */
+        margin-bottom: 20px; /* Добавляем отступ снизу между элементами */
+    }
+    body, html {
+        font-size: 12px;
+    }
+    .top__welcome-text {
+        font-size: 16px;
+    }
+    .categories__heading, .best-sellers__heading, .promotions__heading {
+        font-size: 1.8rem;
+    } 
+    .top__welcome-text{
+        padding:15px; 
+    }
+}
+
+@media (max-width:512px){
+    .top__welcome-text{
+        font-size:18px; 
+    }
+}
+
+
+

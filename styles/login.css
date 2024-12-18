@@ -1,0 +1,107 @@
+main{ 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+}
+form.card {
+    background-color: #1e1e1e;
+    padding: 25px 45px 25px 45px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    color: #f1f1f1;
+    width: 90%;
+    max-width: 530px; /* Increased max width for a wider appearance */
+    box-sizing: border-box;
+}
+
+form.card h2 { 
+    margin-bottom: 1rem; 
+    color: #f8f8f8; 
+    font-weight: 600; 
+    font-size: 1.5rem; 
+} 
+ 
+form.card label { 
+    display: block; 
+    margin-bottom: 1rem; 
+    font-weight: 500; 
+    color: #cfcfcf; 
+} 
+ 
+/* Input Fields */ 
+form.card input[type="text"], 
+form.card input[type="password"] { 
+    width: 100%; 
+    padding: 0.75rem; 
+    margin-top: 0.5rem; 
+    background-color: #333; 
+    border: 1px solid #555; 
+    border-radius: 4px; 
+    color: #f8f8f8; 
+    font-size: 1rem; 
+} 
+ 
+form.card input[type="text"]:focus, 
+form.card input[type="password"]:focus { 
+    border-color: #888; 
+    outline: none; 
+} 
+ 
+/* Error Notice */ 
+form.card .notice.error { 
+    background-color: #d9534f; 
+    color: #fff; 
+    padding: 0.75rem; 
+    margin-bottom: 1rem; 
+    border-radius: 4px; 
+    font-size: 0.9rem; 
+} 
+ 
+/* Validation Error Message */ 
+form.card small { 
+    display: block; 
+    color: #ff6b6b; 
+    margin-top: 0.3rem; 
+    font-size: 0.85rem; 
+} 
+ 
+/* Submit Button */ 
+form.card button#submit { 
+    display: block; 
+    margin: 10px 30px; 
+    padding: 0.70rem 0.60rem; 
+    background-color: #007bff; 
+    border: none; 
+    border-radius: 4px; 
+    color: #fff; 
+    font-weight: 600; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    width: 85%; /* Keeps button full width */ 
+} 
+ 
+form.card button#submit:hover { 
+    background-color: #0056b3; 
+} 
+ 
+/* Link to Register */ 
+form.card p.register-link { 
+    margin-top: 1rem; 
+    text-align: center; 
+    color: #b3b3b3; 
+    font-size: 0.9rem; 
+} 
+ 
+form.card p.register-link a { 
+    color: #007bff; 
+    text-decoration: none; 
+    font-weight: 500; 
+} 
+ 
+form.card p.register-link a:hover { 
+    text-decoration: underline; 
+}
+
+
+

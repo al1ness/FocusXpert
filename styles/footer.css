@@ -1,0 +1,142 @@
+footer {
+    background-color: #1c1b1b; 
+    color: #fff; 
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 120px;
+    flex-grow:0; 
+    flex-shrink:0; 
+    /* width: 1920px; */
+}
+
+footer .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin: 0px 0px 20px 50px; 
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer__nav {
+    margin-right: 40px;
+}
+
+.footer__nav--heading {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer__nav--menu {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__nav--menu li {
+    margin-bottom: 10px;
+}
+
+.footer__nav--link {
+    color: #fff;
+}
+
+.footer__nav--menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__nav--menu li a:hover {
+    color: #ff6347; /* Изменение цвета ссылки при наведении */
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer__form--heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer__form--input {
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    width: 250px;
+}
+
+.footer__button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer__button:hover {
+    background-color: #ff4500; /* Изменение фона кнопки при наведении */
+}
+
+.footer_icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+footer .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Белый цвет иконок */
+    transition: transform 0.3s;
+}
+
+footer .icon:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width:850px){ 
+    footer .logo{
+        width:85%; 
+        margin-left:30px; 
+    }
+    .footer__content{
+        flex-flow:column nowrap; 
+    }
+    .footer__info{ 
+        width:85%; 
+        order:2; 
+    } 
+    .footer__form{
+        width:85%; 
+        order:1; 
+        margin:30px auto 50px auto; 
+    }
+}
+
+
+
+
+

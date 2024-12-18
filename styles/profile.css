@@ -1,0 +1,64 @@
+main{ 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+}
+/* Container for user card */
+.card.home {
+    background-color: #1e1e1e; /* Dark background */
+    color: #f1f1f1; /* Light text */
+    padding: 60px; /* Increased padding for more area */
+    border-radius: 12px; /* Slightly larger border radius */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+    max-width: 1100px; /* Increased width of the card */
+    text-align: center;
+    margin: 0px auto; /* Centered horizontally */
+}
+
+/* Avatar Styling */
+.card.home .avatar {
+    width: 150px; /* Increased avatar size */
+    height: 150px; /* Increased avatar size */
+    border-radius: 50%;
+    margin-bottom: 25px; /* Increased margin */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.card.home .avatar:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Greeting text */
+.card.home h1 {
+    font-size: 2.2rem; /* Larger font size */
+    font-weight: 600;
+    color: #f8f8f8;
+    margin-bottom: 30px; /* Increased margin */
+}
+
+/* Logout button styling */
+.card.home form button {
+    padding: 1rem 1.5rem; /* Increased padding */
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px; /* Slightly larger border radius */
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem; /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition */
+    width: 100%; /* Full-width button */
+    max-width: 250px; /* Maximum width for the button */
+    margin-top: 30px; /* Increased margin */
+}
+
+.card.home form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Adjusting margin and padding for the card layout */
+.card.home form {
+    margin: 0;
+}
